@@ -69,8 +69,9 @@ nest_asyncio.apply()
 
 DATA_DIR = os.getenv("DATA_DIR", "./data")
 
-api_key = os.getenv("LLAMA_CLOUD_API_KEY", "<YOUR_API_KEY>")
-os.environ["LLAMA_CLOUD_API_KEY"] = api_key
+api_key = os.getenv("LLAMA_CLOUD_API_KEY")
+if api_key:
+    os.environ["LLAMA_CLOUD_API_KEY"] = api_key
 
 # 1. Initialize Engines
 llm = Ollama(model="llama3.1", request_timeout=120.0, additional_kwargs={"num_ctx": 16384, "temperature": 0.0})
@@ -112,7 +113,7 @@ Settings.chunk_overlap = 200
 # 2. Neo4j Connection
 graph_store = Neo4jPropertyGraphStore(
     username="neo4j",
-    password="Avyukt@TATA_RATAN2026",
+    password=os.environ.get("NEO4J_PASSWORD", "password_not_set"),
     url="bolt://localhost:7687",
     refresh_schema=False
 )

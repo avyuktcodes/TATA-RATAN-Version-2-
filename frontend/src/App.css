@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', 'Inter', sans-serif;
+}
+
+body {
+  background-color: #f0f2f5; /* Light corporate grey */
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.corporate-header {
+  background-color: #173f8a; /* Tata Blue */
+  color: white;
+  padding: 20px 30px;
+  border-bottom: 4px solid #0055ff;
+}
+
+.corporate-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.corporate-header span {
+  font-weight: 300;
+  opacity: 0.8;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.chat-interface {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.chat-history {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.message-bubble {
+  max-width: 80%;
+  padding: 15px 20px;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.message-bubble.user {
+  align-self: flex-end;
+  background-color: #f1f3f4;
+  border-left: 4px solid #9aa0a6;
+}
+
+.message-bubble.assistant {
+  align-self: flex-start;
+  background-color: #e8f0fe;
+  border-left: 4px solid #173f8a;
+}
+
+.message-sender {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: #5f6368;
+}
+
+.chat-input-form {
+  display: flex;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  gap: 15px;
+}
+
+.chat-input-form input {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.chat-input-form input:focus {
+  outline: none;
+  border-color: #173f8a;
+}
+
+.chat-input-form button {
+  padding: 0 30px;
+  background-color: #173f8a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-input-form button:hover:not(:disabled) {
+  background-color: #0c2a63;
+}
+
+.chat-input-form button:disabled {
+  background-color: #a0b2d6;
+  cursor: not-allowed;
+}

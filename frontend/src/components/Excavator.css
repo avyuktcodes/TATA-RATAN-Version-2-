@@ -1,0 +1,43 @@
+.excavator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 30px;
+  background-color: #f8f9fa; /* Light corporate grey */
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  width: 100%;
+}
+
+.excavator-vehicle {
+  font-size: 3rem;
+  animation: dig 2s infinite ease-in-out;
+}
+
+.coal-pile {
+  font-size: 1.5rem;
+  margin-bottom: -15px;
+  opacity: 0.8;
+}
+
+.thinking-text {
+  margin-top: 20px;
+  color: #173f8a; /* Tata Corporate Blue */
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes dig {
+  0% { transform: translateX(-40px) rotate(-10deg); }
+  50% { transform: translateX(40px) rotate(15deg); }
+  100% { transform: translateX(-40px) rotate(-10deg); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
