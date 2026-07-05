@@ -59,7 +59,7 @@ graph TD
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 tata_ratan/
@@ -78,7 +78,7 @@ tata_ratan/
 
 ---
 
-## 🚀 Setup & Usage Guide
+## Setup & Usage Guide
 
 ### Prerequisites
 1. **Neo4j Desktop:** Ensure Neo4j is installed and running locally on `bolt://localhost:7687`.
@@ -118,7 +118,7 @@ Navigate to `http://localhost:5173` in your browser to access the Executive Dash
 
 ---
 
-## 💡 Important Tips & Troubleshooting
+## Important Tips & Troubleshooting
 
 1. **Two Terminals Required:** You *must* run the FastAPI backend (`api.py`) and the React frontend (`npm run dev`) simultaneously in two completely separate terminal windows. If you close either terminal, the app will break.
 2. **Environment Variables Reset:** On Mac, every time you open a *new* terminal tab or window, your exported variables are forgotten. Always remember to `export GEMINI_API_KEY="..."` before running the backend in a fresh terminal!
